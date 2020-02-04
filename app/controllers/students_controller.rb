@@ -20,6 +20,12 @@ class StudentsController < ApplicationController
   end
 
   def update
+
+  end
+
+  private
+
+  def post_params(*args)
     
   end
 end
