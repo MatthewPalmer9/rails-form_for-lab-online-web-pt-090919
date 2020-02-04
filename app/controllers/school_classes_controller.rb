@@ -19,13 +19,13 @@ class SchoolClassesController < ApplicationController
 
   def update
     @student_class.find(params[:id])
-    @student_class.update(class_params(:title, :room_number))
-    redirect_to student_class_path(@student_class) 
+    @student_class.update(student_class_params(:title, :room_number))
+    redirect_to student_class_path(@student_class)
   end
 
   private
 
-  def class_params(*args)
+  def student_class_params(*args)
     params.require(:student_class).permit(*args)
   end
 end
