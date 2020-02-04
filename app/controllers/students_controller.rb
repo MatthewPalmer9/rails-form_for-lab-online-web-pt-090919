@@ -21,12 +21,12 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
-    @student.update
+    @student.update(student_params)
   end
 
   private
 
-  def post_params(*args)
+  def student_params(*args)
     params.require(:student).permit(*args)
   end
 end
