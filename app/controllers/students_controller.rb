@@ -26,6 +26,6 @@ class StudentsController < ApplicationController
   private
 
   def post_params(*args)
-    
+    params.require()
   end
 end
