@@ -17,7 +17,7 @@ class SchoolClassesController < ApplicationController
 
   def update
     @student.find(params[:id])
-    @student.update(class_params(:title, ))
+    @student.update(class_params(:title, :room_number))
   end
 
   private
