@@ -8,7 +8,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    class_id
+    @school_class = SchoolClass.create()
   end
 
   def show
