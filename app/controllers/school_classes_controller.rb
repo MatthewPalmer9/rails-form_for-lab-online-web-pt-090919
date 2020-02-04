@@ -13,15 +13,15 @@ class SchoolClassesController < ApplicationController
   end
 
   def show
-    class_id
+    class_path
   end
 
   def edit
-    class_id
+    class_path
   end
 
   def update
-    class_id
+    class_path
     @school_class.update(school_class_params(:title, :room_number))
     redirect_to school_class_path(@school_class)
   end
@@ -32,7 +32,7 @@ class SchoolClassesController < ApplicationController
     params.require(:student_class).permit(*args)
   end
 
-  def class_id
+  def class_path
     @school_class = SchoolClass.find(params[:id])
   end
 end
