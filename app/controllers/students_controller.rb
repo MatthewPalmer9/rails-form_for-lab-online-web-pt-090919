@@ -26,6 +26,6 @@ class StudentsController < ApplicationController
   private
 
   def post_params(*args)
-    params.require(:student).permit(:first_name, :last_name)
+    params.require(:student).permit(*args)
   end
 end
